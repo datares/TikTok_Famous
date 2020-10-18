@@ -7,19 +7,19 @@
 
 
 ## Make virtual env:
-python3 -m venv venv
+`python3 -m venv venv`
 
 ## Access virtual env:
-source venv/bin/activate
+`source venv/bin/activate`
 
 ## Download dependencies:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ## Produce requirements.txt format:
-pip freeze
+`pip freeze`
 
 ## Make kernel for jupyter notebook:
-ipython kernel install --name=TikTok
+`ipython kernel install --name=TikTok`
 
 
 ## Importing the TikTok API
