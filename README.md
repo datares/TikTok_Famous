@@ -18,6 +18,8 @@
 ## Produce requirements.txt format:
 `pip freeze`
 
+* More about virtual environments [here](https://www.youtube.com/watch?v=Kg1Yvry_Ydk&t=367s)
+
 ## Make kernel for jupyter notebook:
 `ipython kernel install --name=TikTok`
 
