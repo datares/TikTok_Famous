@@ -1,51 +1,51 @@
-Rank,Username,Owner,Followers[8](millions),Likes[8](millions),Description,Country,Brand Account,Sex,Age,Ethnicity
-1,@charlidamelio,Charli D'Amelio,93.7,6646.4,Dancer and social media personality,United States,0,Female,16,White
-2,@addisonre,Addison Rae,65.3,3711.6,Dancer and social media personality,United States,0,Female,19,White
-3,@zachking,Zach King,51,592.4,Filmmaker and social media personality,United States,0,Male,30,East Asian
-4,@lorengray,Loren Gray,48.2,2571.9,Singer and social media personality,United States,0,Female,18,White
-5,@tiktok,TikTok,48.2,240.8,Social media platform,United States,1,,,
-6,@spencerx,Spencer Polanco Knight,46.5,1075.6,Beatboxer and social media personality,United States,0,Male,28,White
-7,@riyaz.14,Riyaz Aly,43.5,2047.8,Social media personality,India,0,Male,17,South Asian
-8,@justmaiko,Michael Le,41,1046.1,Dancer and social media personality,United States,0,Male,20,Southeast Asian
-9,@dixiedamelio,Dixie D'Amelio,41,1188.9,"Singer, actress and social media personality",United States,0,Female,19,White
-10,@willsmith,Will Smith,39,198.5,Actor,United States,0,Male,52,Black
-11,@jasonderulo,Jason Derulo,37.8,828.9,"Singer, songwriter, and dancer",United States,0,Male,31,Black
-12,@bellapoarch,Bella Poarch,37.3,574.3,Social media personality,Philippines,0,Female,19,Southeast Asian
-13,@babyariel,Baby Ariel,34.7,1857,"Singer, actress, and social media personality",United States,0,Female,20,White
-14,@brentrivera,Brent Rivera,34.4,1039.4,Actor and social media personality,United States,0,Male,22,White
-15,@mr_faisu_07,Faisal Shaikh,32.1,1968.4,Social media personality,India,0,Male,43,South Asian
-16,@gilmhercroes,Gilmher Croes,30,746.9,Social media personality,United States,0,Male,21,White
-17,@itsjojosiwa,JoJo Siwa,29.6,996.4,"Singer, actress, dancer, and social media personality",United States,0,Female,17,White
-18,@therock,The Rock,29.2,159.1,Actor and former wrestler,USAÂ CAN,0,Male,48,Black
-19,@kimberly.loaiza,Kimberly Loaiza,29.5,1260.5,Singer and social media personality,Mexico,0,Female,23,Latinx
-20,@_arishfakhan_,Arishfa Khan,28.5,1141.7,Actress and social media personality,India,0,Female,17,South Asian
-21,@jannat_zubair29,Jannat Zubair Rahmani,28.1,744.1,Actress and social media personality,India,0,Female,19,South Asian
-22,@nishaguragain,Nisha Guragain,28,756,Social media personality,India,0,Female,23,South Asian
-23,@flighthouse,Flighthouse,27.4,2256.8,Digital entertainment brand,United States,1,,,
-24,@avani,Avani Gregg,27.4,1755.5,Social media personality,United States,0,Female,18,White
-25,@stokestwins,Stokes Twins,27.1,698.8,Social media personalities,United States,0,Male,24,East Asian
-26,@jamescharles,James Charles,26.9,585.3,Social media personality,United States,0,Male,21,White
-27,@joealbanese,Joe Albanese,26.7,1002.3,Social media personality,United States,0,Male,19,White
-28,@cznburak,Burak …zdemir,26.5,481.9,Social media personality,Turkey,0,Male,62,White
-29,@dobretwins,Lucas and Marcus,26.1,747.2,Social media personalities,United States,0,Male,21,White
-30,@awezdarbar,Awez Darbar,25.9,1059.7,Choreographer and social media personality,India,0,Male,27,South Asian
-31,@lilhuddy,Chase Hudson,25.7,1370.5,Social media personality,United States,0,Male,18,White
-32,@selenagomez,Selena Gomez,25.2,66.4,"Singer, actress, and social media personality",United States,0,Female,28,Latinx
-33,@kristenhancher,Kristen Hancher,24.6,1739.1,Actress and social media personality,Canada,0,Female,21,White
-34,@sameeksha_sud,Sameeksha Sud,24.5,1185.8,Actress and social media personality,India,0,Female,27,South Asian
-35,@tiktok_india,TikTok India,24.4,40,Social media platform,India,1,,,
-36,@lizzza,Liza Koshy,24.4,266.7,Actress and social media personality,United States,0,Female,24,South Asian
-37,@jacobsartorius,Jacob Sartorius,23.7,1551.5,Singer and social media personality,United States,0,Male,18,White
-38,@daviddobrik,David Dobrik,23.3,896.8,Social media personality,United States,0,Male,24,White
-39,@jaydencroes,Jayden Croes,23.1,1012.1,Social media personality,United States,0,Male,21,White
-40,@livetv,musical.ly,23,3,Social media platform,China,1,,,
-41,@savv.labrant,Savannah LaBrant,22.9,1338.4,Social media personality,United States,0,Female,27,White
-42,@bts_official_bighit,BTS,22.9,432.1,Boy Band,South Korea,1,Male,,East Asian
-43,@piyanka_mongia,Piyanka Mongia,22.7,458.4,Social media personality,India,0,Female,23,South Asian
-44,@tonylopez,Tony Lopez,22.7,959.3,Social media personality,United States,0,Male,20,Latinx
-45,@avneetkaur_13,Avneet Kaur,22.5,553,Social media personality,India,0,Female,19,South Asian
-46,@kirakosarin,Kira Kosarin,22.5,365.1,Actress and social media personality,United States,0,Female,23,White
-47,@joshrichards,Josh Richards,22.5,1337.7,Social media personality,United States,0,Male,18,White
-48,@cutybeautykhan,Beauty Khan,21.4,640.8,Social media personality,India,0,Female,19,South Asian
-49,@gima_ashi,Garima Chaurasia,21.3,633.6,Social media personality,India,0,Female,23,South Asian
-50,@jiffpom,Jiff Pom,21.2,516.7,Social media personality,United States,1,,,
+Rank,Username,Owner,Followers,Likes,Description,Country,Brand Account,Gender,Age,Ethnicity,Famous,Genre,Income,Education,LGBTQ
+1,@charlidamelio,Charli D'Amelio,93.7,6646.4,"Dancer, social media personality",United States,0,Female,16,White,,,,,
+2,@addisonre,Addison Rae,65.3,3711.6,"Dancer, social media personality",United States,0,Female,19,White,,,,,
+3,@zachking,Zach King,51,592.4,"Filmmaker, social media personality",United States,0,Male,30,East Asian,,,,,
+4,@lorengray,Loren Gray,48.2,2571.9,"Singer, social media personality",United States,0,Female,18,White,,,,,
+5,@tiktok,TikTok,48.2,240.8,Social media platform,United States,1,,,,,,,,
+6,@spencerx,Spencer Polanco Knight,46.5,1075.6,"Beatboxer, social media personality",United States,0,Male,28,White,,,,,
+7,@riyaz.14,Riyaz Aly,43.5,2047.8,Social media personality,India,0,Male,17,South Asian,,,,,
+8,@justmaiko,Michael Le,41,1046.1,"Dancer, social media personality",United States,0,Male,20,Southeast Asian,,,,,
+9,@dixiedamelio,Dixie D'Amelio,41,1188.9,"Singer, actress, social media personality",United States,0,Female,19,White,,,,,
+10,@willsmith,Will Smith,39,198.5,Actor,United States,0,Male,52,Black,,,,,
+11,@jasonderulo,Jason Derulo,37.8,828.9,"Singer, songwriter, dancer",United States,0,Male,31,Black,,,,,
+12,@bellapoarch,Bella Poarch,37.3,574.3,Social media personality,Philippines,0,Female,19,Southeast Asian,,,,,
+13,@babyariel,Baby Ariel,34.7,1857,"Singer, actress, social media personality",United States,0,Female,20,White,,,,,
+14,@brentrivera,Brent Rivera,34.4,1039.4,"Actor, social media personality",United States,0,Male,22,White,,,,,
+15,@mr_faisu_07,Faisal Shaikh,32.1,1968.4,Social media personality,India,0,Male,43,South Asian,,,,,
+16,@gilmhercroes,Gilmher Croes,30,746.9,Social media personality,United States,0,Male,21,White,,,,,
+17,@itsjojosiwa,JoJo Siwa,29.6,996.4,"Singer, actress, dancer, social media personality",United States,0,Female,17,White,,,,,
+18,@therock,The Rock,29.2,159.1,"Actor, former wrestler",USAÂ CAN,0,Male,48,Black,,,,,
+19,@kimberly.loaiza,Kimberly Loaiza,29.5,1260.5,"Singer, social media personality",Mexico,0,Female,23,Latinx,,,,,
+20,@_arishfakhan_,Arishfa Khan,28.5,1141.7,"Actress, social media personality",India,0,Female,17,South Asian,,,,,
+21,@jannat_zubair29,Jannat Zubair Rahmani,28.1,744.1,"Actress, social media personality",India,0,Female,19,South Asian,,,,,
+22,@nishaguragain,Nisha Guragain,28,756,Social media personality,India,0,Female,23,South Asian,,,,,
+23,@flighthouse,Flighthouse,27.4,2256.8,Digital entertainment brand,United States,1,,,,,,,,
+24,@avani,Avani Gregg,27.4,1755.5,Social media personality,United States,0,Female,18,White,,,,,
+25,@stokestwins,Stokes Twins,27.1,698.8,Social media personality,United States,0,Male,24,East Asian,,,,,
+26,@jamescharles,James Charles,26.9,585.3,Social media personality,United States,0,Male,21,White,,,,,
+27,@joealbanese,Joe Albanese,26.7,1002.3,Social media personality,United States,0,Male,19,White,,,,,
+28,@cznburak,Burak …zdemir,26.5,481.9,Social media personality,Turkey,0,Male,62,White,,,,,
+29,@dobretwins,Lucas and Marcus,26.1,747.2,Social media personality,United States,0,Male,21,White,,,,,
+30,@awezdarbar,Awez Darbar,25.9,1059.7,"Choreographer, social media personality",India,0,Male,27,South Asian,,,,,
+31,@lilhuddy,Chase Hudson,25.7,1370.5,Social media personality,United States,0,Male,18,White,,,,,
+32,@selenagomez,Selena Gomez,25.2,66.4,"Singer, actress, social media personality",United States,0,Female,28,Latinx,,,,,
+33,@kristenhancher,Kristen Hancher,24.6,1739.1,"Actress, social media personality",Canada,0,Female,21,White,,,,,
+34,@sameeksha_sud,Sameeksha Sud,24.5,1185.8,"Actress, social media personality",India,0,Female,27,South Asian,,,,,
+35,@tiktok_india,TikTok India,24.4,40,Social media platform,India,1,,,,,,,,
+36,@lizzza,Liza Koshy,24.4,266.7,"Actress, social media personality",United States,0,Female,24,South Asian,,,,,
+37,@jacobsartorius,Jacob Sartorius,23.7,1551.5,"Singer, social media personality",United States,0,Male,18,White,,,,,
+38,@daviddobrik,David Dobrik,23.3,896.8,Social media personality,United States,0,Male,24,White,,,,,
+39,@jaydencroes,Jayden Croes,23.1,1012.1,Social media personality,United States,0,Male,21,White,,,,,
+40,@livetv,musical.ly,23,3,Social media platform,China,1,,,,,,,,
+41,@savv.labrant,Savannah LaBrant,22.9,1338.4,Social media personality,United States,0,Female,27,White,,,,,
+42,@bts_official_bighit,BTS,22.9,432.1,Boy Band,South Korea,1,Male,,East Asian,,,,,
+43,@piyanka_mongia,Piyanka Mongia,22.7,458.4,Social media personality,India,0,Female,23,South Asian,,,,,
+44,@tonylopez,Tony Lopez,22.7,959.3,Social media personality,United States,0,Male,20,Latinx,,,,,
+45,@avneetkaur_13,Avneet Kaur,22.5,553,Social media personality,India,0,Female,19,South Asian,,,,,
+46,@kirakosarin,Kira Kosarin,22.5,365.1,Actress and social media personality,United States,0,Female,23,White,,,,,
+47,@joshrichards,Josh Richards,22.5,1337.7,Social media personality,United States,0,Male,18,White,,,,,
+48,@cutybeautykhan,Beauty Khan,21.4,640.8,Social media personality,India,0,Female,19,South Asian,,,,,
+49,@gima_ashi,Garima Chaurasia,21.3,633.6,Social media personality,India,0,Female,23,South Asian,,,,,
+50,@jiffpom,Jiff Pom,21.2,516.7,Social media personality,United States,1,,,,,,,,
