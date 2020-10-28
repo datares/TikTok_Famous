@@ -40,6 +40,7 @@ def data_cleaner(data):
         vid = {}
         vid['user_name'] = tiktok['author']['uniqueId']
         vid['hashtags'] = hashtag_cleaner(tiktok['desc'])
+        vid['song'] = tiktok['music']['title']
         vid['video_length'] = tiktok['video']['duration']
         vid['n_likes'] = tiktok['stats']['diggCount']
         vid['n_shares'] = tiktok['stats']['shareCount']
