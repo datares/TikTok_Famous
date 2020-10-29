@@ -73,5 +73,3 @@ page_soup = soup(page_html, "html.parser")
 |Madison Kohls(https://github.com/madisonkohls)  | @madisonkohls   |
 |[Full Name](https://github.com/[github handle]) |     @janeDoe    |
 |[Full Name](https://github.com/[github handle]) |     @janeDoe    |
-
-![TikTok Image b/c why not](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrocku.ca%2Fsocial-sciences%2Fchild-and-youth-studies%2Ftiktok%2F&psig=AOvVaw0YYwtHj_xbeavM2Ano9lGD&ust=1604031707028000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjGovP52OwCFQAAAAAdAAAAABAZ "TikTok Logo")
