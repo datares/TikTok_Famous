@@ -2,9 +2,9 @@
 This project is a part of the [Data Blog](https://datares.github.io/#/datablog) at [DataResolutions](https://datares.github.io/#/).  The article published on this project, along with other articles from Data Blog, can be found on [Medium](https://medium.com/@ucladatares).
 
 ## Project Motivation/Description
-The purpose of this project is to explore various aspects of TikTok—specifically the demographics of TikTok's most followed users and the analytics of trending videos on TikTok. Questions we wanted to answer include: ...
+The purpose of this project is to explore various aspects of TikTok—specifically the demographics of TikTok's most followed users and the analytics of trending videos on TikTok. Questions we wanted to answer include: **Add stuff here**
 
-### Technologies
+### Technologies Used
 * R 
 * Python
 * NumPy, Pandas, Matplotlib, SeasBorn, jupyter
@@ -12,25 +12,24 @@ The purpose of this project is to explore various aspects of TikTok—specifical
 ## Getting Started
 
 1. Clone this repository (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.  
-3. Data processing/visualization scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-5. Follow setup [instructions](Link to file)
+2. Raw Data is being kept [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets) within this repo.  
+3. Data processing/visualization scripts are being kept [here](https://github.com/ivantran96/TikTok_famous/tree/main/Visualizations)
 
 ### Data Collection
-For the data collection, we had a different method for our trending videos dataset and our top tiktokers dataset.
+For the data collection, we had a different method of collection for our trending videos dataset and our top tiktokers dataset.
 
 #### Trending Videos
 [TikTok data collection article](https://towardsdatascience.com/how-to-collect-data-from-tiktok-tutorial-ab848b40d191)
 [TikTok API](https://github.com/davidteather/TikTok-Api)
 
-**ADD PROCESS OF COLLECTION W/ API HERE**
+...ADD PROCESS OF COLLECTION W/ API HERE...
 
 #### Top TikTokers
-For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](Repo folder) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). THe remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and TikTok(https://www.tiktok.com/en/).
+For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). THe remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
 
-This dataset looks into the demographics of the top 260 TikTokers and is used to explore possible commanalities of the top influencers on the platform.
+This dataset `top-260-tiktokers.csv` looks into the demographics of the top 260 TikTokers and is used to explore possible commanalities of the top influencers on the platform.
 
-The dataset `top-260-tiktokers.csv` consists of 14 columns
+It consists of 14 columns:
 * Rank
 * Username
 * Country
@@ -47,7 +46,7 @@ The dataset `top-260-tiktokers.csv` consists of 14 columns
 * LBGTQ (1 if they are a member of the LGBTQ community, 0 if not. Based on what information is public about their identity)
 
 ##### get-csv Webscraping
-Simply using the get-csv.py script will allow you to obtain the first 6 columns of
+Simply using the get-csv.py script will allow you to obtain the first 6 columns of `top-260-tiktokers.csv`
 
 1. Get the necessary libraries to obtain and parse the html of the data
 `pip install beautifulsoup4`
@@ -71,6 +70,8 @@ page_soup = soup(page_html, "html.parser")
 
 |Name     |  Slack Handle   | 
 |---------|-----------------|
-|[Madison Kohls(https://github.com/madisonkohls)| @madisonkohls        |
+|Madison Kohls(https://github.com/madisonkohls)  | @madisonkohls   |
 |[Full Name](https://github.com/[github handle]) |     @janeDoe    |
 |[Full Name](https://github.com/[github handle]) |     @janeDoe    |
+
+![TikTok Image b/c why not](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrocku.ca%2Fsocial-sciences%2Fchild-and-youth-studies%2Ftiktok%2F&psig=AOvVaw0YYwtHj_xbeavM2Ano9lGD&ust=1604031707028000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjGovP52OwCFQAAAAAdAAAAABAZ "TikTok Logo")
