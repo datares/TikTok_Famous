@@ -25,7 +25,7 @@ For the data collection, we had a different method of collection for our trendin
 ...ADD PROCESS OF COLLECTION W/ API HERE...
 
 #### Top TikTokers
-For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). THe remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
+For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). The remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
 
 This dataset `top-260-tiktokers.csv` looks into the demographics of the top 260 TikTokers and is used to explore possible commanalities of the top influencers on the platform.
 
@@ -60,7 +60,7 @@ uClient.close()
 #save the page as "soup" that can be parsed
 page_soup = soup(page_html, "html.parser")
 ```
-3. Following commands from the [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), you can get appropriate information from the html page and write into a file (using commas and newline will make it a CSV file).
+3. Following commands from the [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), you can get the necessary information from the html page and write it into a file (using commas and newline to make it a CSV file).
 
 ## Contributing DataRes Members
 
