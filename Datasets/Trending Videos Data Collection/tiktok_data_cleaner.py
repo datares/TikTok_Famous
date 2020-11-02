@@ -1,4 +1,4 @@
-# outputs tiktok dictionaty of trending videos
+# outputs tiktok dictionary of trending videos
 # input: number of videos
 # output: tiktok dictionary
 def get_trending_data(n = 10):
