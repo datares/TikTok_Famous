@@ -1,7 +1,0 @@
-function() {
-
-print("hi")
-
-}
-
-# hi
