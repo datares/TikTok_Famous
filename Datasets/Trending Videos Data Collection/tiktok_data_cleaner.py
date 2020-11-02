@@ -38,6 +38,8 @@ def data_cleaner(data):
     vids = []
     for tiktok in data:
         vid = {}
+        vid['id'] = tiktok['id']
+        vid['create_time'] = tiktok['createTime']
         vid['user_name'] = tiktok['author']['uniqueId']
         vid['hashtags'] = hashtag_cleaner(tiktok['desc'])
         vid['song'] = tiktok['music']['title']
@@ -46,6 +48,9 @@ def data_cleaner(data):
         vid['n_shares'] = tiktok['stats']['shareCount']
         vid['n_comments'] = tiktok['stats']['commentCount']
         vid['n_plays'] = tiktok['stats']['playCount']
+        vid['n_followers'] = tiktok['authorStats']['followerCount']
+        vid['n_total_likes'] = tiktok['authorStats']['heart']
+        vid['n_total_vids'] = tiktok['authorStats']['videoCount']
         vids.append(vid)
     vids_df = pd.DataFrame(vids)
     return vids_df
