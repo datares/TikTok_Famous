@@ -73,7 +73,7 @@ Insert info here :)
 
 ## Contributing DataRes Members :muscle:
 
-**Team Lead : Ivan Tran (https://github.com/[github handle])(@slackHandle)**
+**Team Lead : Ivan Tran [@slackHandle](https://github.com/[github handle])**
 
 #### Other Members:
 
