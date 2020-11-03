@@ -79,6 +79,6 @@ Insert info here :)
 
 |Name     |  Slack Handle   | 
 |---------|-----------------|
-|Madison Kohls(https://github.com/madisonkohls)  | @madisonkohls   |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
+|Madison Kohls  | [@madisonkohls](https://github.com/madisonkohls)   |
+|Full Name | [@janeDoe](https://github.com/[github handle])    |
+|Full Name | [@janeDoe](https://github.com/[github handle])    |
