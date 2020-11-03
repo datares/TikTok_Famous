@@ -1,4 +1,4 @@
-# Demystifying TikTok :musical_note:
+# Demystifying TikTok :notes:
 This project is a part of the [Data Blog](https://datares.github.io/#/datablog) at [DataResolutions](https://datares.github.io/#/).  The article published on this project, along with other articles from Data Blog, can be found on [Medium](https://medium.com/@ucladatares).
 
 ## Project Motivation/Description :dizzy:
@@ -65,7 +65,7 @@ page_soup = soup(page_html, "html.parser")
 #### Adding remaining information
 We were not able to find a cohesive list of information on the demographics of the top TikTokers, so we manually entered in the remaining columns.
 
-## Data Cleaning 
+## Data Cleaning :shower:
 For the `top-260-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
 
 ## Data Analysis :bar_chart:
