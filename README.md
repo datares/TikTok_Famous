@@ -7,7 +7,7 @@ The purpose of this project is to explore various aspects of TikTok—specifical
 ### Technologies Used :computer:
 * R 
 * Python
-* NumPy, Pandas, Matplotlib, SeasBorn, jupyter
+* NumPy, Pandas, Matplotlib, SeasBorn, Plotly, jupyter
 
 ## Getting Started :page_facing_up:
 
@@ -69,16 +69,20 @@ We were not able to find a cohesive list of information on the demographics of t
 For the `top-260-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
 
 ## Data Analysis :bar_chart:
-Insert info here :)
+Our analysis can be found [here](https://github.com/ivantran96/TikTok_famous/tree/main/Analysis). Each member of the team contributed to delevoping visualizations for our article, half working on Trending TikTok videos and the other half on demographics of the Top 250 TikTokers. The technologies we used is mentioned at the beginning of the README.
+
+### Trending Videos
+Insert questions that were visualized here
+
+### Top TikTokers
+First we wanted to get a general sense of what demographics the top 250 TikTokers fall under. We used various categorical plots such as barplots, pie charts, and treemaps to have different and interesting visuals of the age, country, gender, and ethnicity distrbution of the users. We also wanted to see the distribution of genders and ethnicites of users specifically in the U.S.A (the country with the most top followed TikTokers) who were not previously famous to see what the most probable demographics of a "breakout" TikTok star would be. For this, we used a sanky diagram to see the proportions of newly famous TikTokers in the US based on gender, ethnicity, and the main genre of their content.
+Next we wanted to compare the differences in engagement between the top male and female users. We used barplots to compare the likes/views per each of the top genres for males and females on the platform. We also used a catplot with some added line plots to visualize the percentage difference in likes per view that men and women received in each of the top genres.
 
 ## Contributing DataRes Members :muscle:
 
-**Team Lead : Ivan Tran [@slackHandle](https://github.com/[github handle])**
-
-#### Other Members:
-
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|Madison Kohls  | [@madisonkohls](https://github.com/madisonkohls)   |
-|Full Name | [@janeDoe](https://github.com/[github handle])    |
-|Full Name | [@janeDoe](https://github.com/[github handle])    |
+|Name     | Position | Slack Handle   | 
+|---------|----------|----------------|
+|Ivan Tran | Team Lead | [@ivantran96](https://github.com/ivantran96) |
+|Kaushik Naresh | Member | [@kaushiknaresh47](https://github.com/kaushiknaresh47) |
+|Isha Shah | Member | [@ishashah146](https://github.com/ishashah146) |
+|Madison Kohls | Member | [@madisonkohls](https://github.com/madisonkohls) |
