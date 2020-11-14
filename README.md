@@ -2,7 +2,7 @@
 This project is a part of the [Data Blog](https://datares.github.io/#/datablog) at [DataResolutions](https://datares.github.io/#/).  The article published on this project, along with other articles from Data Blog, can be found on [Medium](https://medium.com/@ucladatares).
 
 ## Project Motivation/Description :dizzy:
-The purpose of this project is to explore various aspects of TikTok—specifically the demographics of TikTok's most followed users and the analytics of trending videos on TikTok. Questions we wanted to answer include: **Add stuff here**
+The purpose of this project is to explore various aspects of TikTok—specifically the demographics of TikTok's most followed users and the analytics of trending videos on TikTok. Questions we wanted to answer include: **Add stuff here**, what are the most popular "genres" on TikTok, what can we say about the most common demographics of the top TikTokers (is there an even distribution of gender, ethnicity, etc.), are there specific genres that men perform better in than women (also the same for different ethnicities).
 
 ### Technologies Used :computer:
 * R 
@@ -31,7 +31,7 @@ From our video data, we are planning on distinguishing popular posts of each use
 ### Top TikTokers
 For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). The remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
 
-This dataset `top-260-tiktokers.csv` looks into the demographics of the top 260 TikTokers and is used to explore possible commanalities of the top influencers on the platform.
+This dataset `top-250-tiktokers.csv` looks into the demographics of the top 250 TikTokers and is used to explore possible commanalities of the top influencers on the platform.
 
 It consists of 14 columns:
 * `Rank`
@@ -50,7 +50,7 @@ It consists of 14 columns:
 * `LBGTQ` (1 if they are a member of the LGBTQ community, 0 if not. Based on what information is public about their identity)
 
 #### get-csv Webscraping
-Simply using the get-csv.py script will allow you to obtain the first 6 columns of `top-260-tiktokers.csv`
+Simply using the get-csv.py script will allow you to obtain the first 6 columns of `top-250-tiktokers.csv`
 
 1. Get the necessary libraries to obtain and parse the html of the data
 `pip install beautifulsoup4`
@@ -70,7 +70,12 @@ page_soup = soup(page_html, "html.parser")
 We were not able to find a cohesive list of information on the demographics of the top TikTokers, so we manually entered in the remaining columns.
 
 ## Data Cleaning :shower:
-For the `top-260-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
+
+### Trending Videos
+Insert cleaning process here.
+
+### Top TikTokers
+For the `top-250-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
 
 ## Data Analysis :bar_chart:
 Our analysis can be found [here](https://github.com/ivantran96/TikTok_famous/tree/main/Analysis). Each member of the team contributed to delevoping visualizations for our article, half working on Trending TikTok videos and the other half on demographics of the Top 250 TikTokers. The technologies we used is mentioned at the beginning of the README.
@@ -79,8 +84,8 @@ Our analysis can be found [here](https://github.com/ivantran96/TikTok_famous/tre
 Insert questions that were visualized here
 
 ### Top TikTokers
-First we wanted to get a general sense of what demographics the top 250 TikTokers fall under. We used various categorical plots such as barplots, pie charts, and treemaps to have different and interesting visuals of the age, country, gender, and ethnicity distrbution of the users. We also wanted to see the distribution of genders and ethnicites of users specifically in the U.S.A (the country with the most top followed TikTokers) who were not previously famous to see what the most probable demographics of a "breakout" TikTok star would be. For this, we used a sanky diagram to see the proportions of newly famous TikTokers in the US based on gender, ethnicity, and the main genre of their content.
-Next we wanted to compare the differences in engagement between the top male and female users. We used barplots to compare the likes/views per each of the top genres for males and females on the platform. We also used a catplot with some added line plots to visualize the percentage difference in likes per view that men and women received in each of the top genres.
+First we wanted to get a general sense of what demographics the top 250 TikTokers fall under. We used various categorical plots such as barplots from `Seaborn`, pie charts from `Matplotlib`, and a treemap from `Plotly` to have different and interesting visuals of the age, country, gender, and ethnicity distrbution of the users. We also wanted to see the distribution of genders and ethnicites of users specifically in the U.S.A (the country with the most top followed TikTokers) who were not previously famous to see what the most probable demographics of a "breakout" TikTok star would be. For this, we used a sanky diagram from `Plotly` to see the proportions of newly famous TikTokers in the US based on gender, ethnicity, and the main genre of their content.
+Next we wanted to compare the differences in engagement between the top male and female users. We used barplots from `Seaborn` to compare the likes/views per each of the top genres for males and females on the platform. We also used a catplot from `Seaborn` with some added vertical line plots from `Matplotlib` to visualize the percentage difference in likes per view that men and women received in each of the top genres.
 
 ## Contributing DataRes Members :muscle:
 
