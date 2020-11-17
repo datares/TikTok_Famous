@@ -6,6 +6,7 @@ The purpose of this project is to explore various aspects of TikTok—specifical
 
 ### Technologies Used :computer:
 * R 
+* tidyverse, ggplot2 
 * Python
 * NumPy, Pandas, Matplotlib, SeasBorn, Plotly, jupyter
 
@@ -27,6 +28,8 @@ For the data collection, we had a different method of collection for our trendin
 For the collection of trending videos, we used [David Teather's Unofficial TikTok Api](https://www.google.com/search?q=tiktok+api&oq=tiktok+api&aqs=chrome.0.69i59j0i20i263j0l5j69i60.1342j0j7&sourceid=chrome&ie=UTF-8) to collect the data. Currently, we are using the api's `trending` method to collect the data on trending videos. This selection of trending videos by this method is assumed to be what is labeled as tredning by TikTok. In addition, using the list of top TikTokers, we compiled a large amount of users using the `getSuggestedUsersbyIDCrawler` api method, which used the top TikTokers and collected the suggested users. Along with the `byUsername` method, which collects videos from specfic TikTokers given their username, we collected video data of the 25 most recent posts of each user from the top TikTokers list and the suggested list. 
 
 From our video data, we are planning on distinguishing popular posts of each user in order to see how those specific posts are able to outpeform the rest of the videos from the users.
+
+In addition to trending video data, we used the `bySound` method of the api to collect data of videos that use some of the most famous songs on TikTok to get an idea of how the choice of music can impact the potential of a video to become a trending video.
 
 ### Top TikTokers
 For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). The remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
@@ -73,6 +76,9 @@ We were not able to find a cohesive list of information on the demographics of t
 
 ### Trending Videos
 Insert cleaning process here.
+Trending Video Dataset:
+
+For the datasets involving the popular songs on TikTok, we first obtained the dictionaries from the api's `bySound` method and then collected the useful metrics into a pandas dataframe to make manipulating the data easier. Then we imported the data into R to create  summary statistics and find out which songs had usable data to create visualizations.
 
 ### Top TikTokers
 For the `top-250-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
@@ -81,7 +87,8 @@ For the `top-250-tiktokers.csv` dataset, we first removed the unnecessary symbol
 Our analysis can be found [here](https://github.com/ivantran96/TikTok_famous/tree/main/Analysis). Each member of the team contributed to delevoping visualizations for our article, half working on Trending TikTok videos and the other half on demographics of the Top 250 TikTokers. The technologies we used is mentioned at the beginning of the README.
 
 ### Trending Videos
-Insert questions that were visualized here
+Based on what TikTok says it's algorithm uses to recommend videos to users, some of the most important factors to make a video go viral are how it appeals to a variety of users and how users interact with these videos. Based on TikTok's [article](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you/) regarding the "For You" recommendation process and general ideas that are used on other social media sites, we identified some of the important metrics for a trending video to be the length of the video, the hashtags used and the songs/sounds used.
+Once we identified these metrics and had our datasets ready, we proceeded to create visualizations that could explore the connections these metrics have with a video being trending. This was done by comparing how these metrics impacted the number of likes, plays, shares and comments a video got. Another trend we looked at was how a more popular TikToker can impact the creations of smaller TikTokers, and how this impacts the chance of video going viral.
 
 ### Top TikTokers
 First we wanted to get a general sense of what demographics the top 250 TikTokers fall under. We used various categorical plots such as barplots from `Seaborn`, pie charts from `Matplotlib`, and a treemap from `Plotly` to have different and interesting visuals of the age, country, gender, and ethnicity distrbution of the users. We also wanted to see the distribution of genders and ethnicites of users specifically in the U.S.A (the country with the most top followed TikTokers) who were not previously famous to see what the most probable demographics of a "breakout" TikTok star would be. For this, we used a sanky diagram from `Plotly` to see the proportions of newly famous TikTokers in the US based on gender, ethnicity, and the main genre of their content.
