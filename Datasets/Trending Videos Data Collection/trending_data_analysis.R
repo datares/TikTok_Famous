@@ -36,17 +36,26 @@ for(i in 1:nrow(abv_avg_likes)){
   abv_avg_likes$flwr_per_video <- abv_avg_likes$n_followers / abv_avg_likes$n_total_vids
 }
 
+options(scipen=999)
 
 ## LIKES vs VIDEO LENGTH based on n_followers
 ggplot(abv_avg_likes, aes(x=video_length, y=n_likes)) + 
   geom_point(aes(colour=n_followers)) + 
-  scale_color_viridis_c() + geom_vline(xintercept = mean(abv_avg_likes$video_length))
+  scale_color_viridis_c() + geom_vline(xintercept = mean(abv_avg_likes$video_length)) +
+  geom_hline(yintercept = mean(abv_avg_likes$n_likes)) +
+  xlab("Video Length (s)") + ylab("Number of likes") + 
+  ggtitle("Number of Likes vs Video Length") +
+  labs(color = "Follower Count", subtitle = "Videos with Above Average Likes") + xlim(c(0, 60))
 # people with more followers seem to post shorter vids, so shorter the sweeter?
 
 
 ggplot(top_users, aes(x=video_length, y=n_likes)) + 
   geom_point(aes(colour=n_followers)) + 
-  scale_color_viridis_c() + geom_vline(xintercept = mean(top_users$video_length))
+  scale_color_viridis_c() + geom_vline(xintercept = mean(top_users$video_length)) + 
+  geom_hline(yintercept = mean(top_users$n_likes)) +
+  xlab("Video Length (s)") + ylab("Number of likes") + 
+  ggtitle("Number of Likes vs Video Length") +
+  labs(color = "Follower Count", subtitle = "All Videos") + xlim(c(0, 60))
 
 
 # add n_hashtags
@@ -56,7 +65,47 @@ for(i in 1:(nrow(top_users)-1)){
 }
 
 ## Likes vs Number of hashtags
-ggplot(top_users, aes(x=n_followers, y=n_likes)) + 
-  geom_point(aes(colour=n_total_likes)) + 
-  scale_color_viridis_c()
+ggplot(top_users, aes(x=n_hash, y=n_likes)) + 
+  geom_point(aes(colour=n_followers)) + 
+  scale_color_viridis_c() + ggtitle("Number of Likes vs Number of Hashtags Used") +
+  labs(color="Follower Count") + xlab("Number of Hashtags") + ylab("Number of Likes") +
+  geom_hline(yintercept = mean(top_users$n_likes)) + 
+  geom_vline(xintercept = mean(top_users$n_hash, na.rm = T))
+
+
+### Sample Song data
+par(mfrow=c(2,2))
+
+ggplot(sd0, aes(x=create_time, y=log(n_followers))) + 
+  geom_point(aes(colour=n_followers)) + 
+  ggtitle("Song: WAP feat. Megan Thee Stallion") + 
+  xlab("Time") + ylab("Number of Followers (log scale)") + 
+  labs(subtitle = "Followers vs Time", color = "Follower Count") + 
+  scale_color_viridis(option = "C") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) + 
+  geom_hline(yintercept = log(summary_stats$avg_likes[1]))
+
+ggplot(sd0, aes(x=create_time, y=log(n_likes))) + geom_point(aes(colour=n_followers)) + 
+  ggtitle("Song: WAP feat. Megan Thee Stallion") + 
+  xlab("Time") + ylab("Number of Likes (log scale)") + 
+  labs(subtitle = "Likes vs Time", color = "Follower Count") + 
+  scale_color_viridis(option = "C") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) + 
+  geom_hline(yintercept = log(summary_stats$avg_likes[1]))
+
+ggplot(sd0, aes(x=create_time, y=log(n_shares))) + 
+  geom_point(aes(colour=n_followers)) + 
+  ggtitle("Song: WAP feat. Megan Thee Stallion") + xlab("Time") + 
+  ylab("Number of Shares (log scale)") + 
+  labs(subtitle = "Shares vs Time", color = "Follower Count") + 
+  scale_color_viridis(option = "C") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) 
+
+ggplot(sd0, aes(x=create_time, y=log(n_plays))) + 
+  geom_point(aes(colour=n_followers)) + 
+  ggtitle("Song: WAP feat. Megan Thee Stallion") + xlab("Time") + 
+  ylab("Number of Plays (log scale)") + 
+  labs(subtitle = "Plays vs Time", color = "Follower Count") + 
+  scale_color_viridis(option = "C") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) 
 
