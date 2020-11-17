@@ -2,6 +2,8 @@
 
 setwd("~/Desktop/TikTok_famous/Datasets/Trending Videos Data Collection")
 library(tidyverse)
+library(viridis)
+library(RColorBrewer)
 
 
 ## Import Datasets
@@ -46,16 +48,19 @@ ggplot(abv_avg_likes, aes(x=video_length, y=n_likes)) +
   xlab("Video Length (s)") + ylab("Number of likes") + 
   ggtitle("Number of Likes vs Video Length") +
   labs(color = "Follower Count", subtitle = "Videos with Above Average Likes") + xlim(c(0, 60))
+
 # people with more followers seem to post shorter vids, so shorter the sweeter?
 
 
 ggplot(top_users, aes(x=video_length, y=n_likes)) + 
   geom_point(aes(colour=n_followers)) + 
-  scale_color_viridis_c() + geom_vline(xintercept = mean(top_users$video_length)) + 
+  geom_vline(xintercept = mean(top_users$video_length)) + 
   geom_hline(yintercept = mean(top_users$n_likes)) +
   xlab("Video Length (s)") + ylab("Number of likes") + 
   ggtitle("Number of Likes vs Video Length") +
-  labs(color = "Follower Count", subtitle = "All Videos") + xlim(c(0, 60))
+  labs(color = "Follower Count") + xlim(c(0, 60)) +
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
+  
 
 
 # add n_hashtags
@@ -79,11 +84,12 @@ par(mfrow=c(2,2))
 ggplot(sd0, aes(x=create_time, y=log(n_followers))) + 
   geom_point(aes(colour=n_followers)) + 
   ggtitle("Song: WAP feat. Megan Thee Stallion") + 
-  xlab("Time") + ylab("Number of Followers (log scale)") + 
-  labs(subtitle = "Followers vs Time", color = "Follower Count") + 
+  xlab("Create Time") + ylab("Number of Followers (log scale)") + 
+  labs(subtitle = "Followers vs Time of Creation", color = "Follower Count") + 
   scale_color_viridis(option = "C") + 
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) + 
-  geom_hline(yintercept = log(summary_stats$avg_likes[1]))
+  geom_hline(yintercept = log(summary_stats$avg_likes[1])) + 
+  geom_smooth(method="lm")
 
 ggplot(sd0, aes(x=create_time, y=log(n_likes))) + geom_point(aes(colour=n_followers)) + 
   ggtitle("Song: WAP feat. Megan Thee Stallion") + 
@@ -91,17 +97,29 @@ ggplot(sd0, aes(x=create_time, y=log(n_likes))) + geom_point(aes(colour=n_follow
   labs(subtitle = "Likes vs Time", color = "Follower Count") + 
   scale_color_viridis(option = "C") + 
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) + 
-  geom_hline(yintercept = log(summary_stats$avg_likes[1]))
+  geom_hline(yintercept = log(summary_stats$avg_likes[1])) + 
+  geom_smooth(method="lm")
 
-ggplot(sd0, aes(x=create_time, y=log(n_shares))) + 
+### best looking graph
+myPalette <- colorRampPalette(rev(brewer.pal(11, "Spectral")))
+
+ggplot(sd0, aes(x=create_time, y=log(n_shares), linetype="Trendline")) + 
   geom_point(aes(colour=n_followers)) + 
-  ggtitle("Song: WAP feat. Megan Thee Stallion") + xlab("Time") + 
+  ggtitle("Song: Cardi B - WAP feat. Megan Thee Stallion") + xlab("Create Time") + 
   ylab("Number of Shares (log scale)") + 
-  labs(subtitle = "Shares vs Time", color = "Follower Count") + 
-  scale_color_viridis(option = "C") + 
-  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) 
+  labs(subtitle = "Number of Shares vs Time of Creation", color = "Follower Count") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) +
+  geom_smooth(method="lm", se=F, aes(group=1), color="#EE1D52") + 
+  scale_linetype_discrete(name = "") + 
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
+  
+  #scale_color_viridis(option = "C")
 
-ggplot(sd0, aes(x=create_time, y=log(n_plays))) + 
+
+print(2)
+
+
+ggplot(sd0, aes(x=create_time, y=log10(n_plays))) + 
   geom_point(aes(colour=n_followers)) + 
   ggtitle("Song: WAP feat. Megan Thee Stallion") + xlab("Time") + 
   ylab("Number of Plays (log scale)") + 
@@ -109,3 +127,23 @@ ggplot(sd0, aes(x=create_time, y=log(n_plays))) +
   scale_color_viridis(option = "C") + 
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) 
 
+
+
+### Length of videos
+ggplot(top_users, aes(x=video_length)) + 
+  geom_histogram(fill="#EE1D52", aes(color = "#101010"), binwidth = 1) + 
+  theme(legend.position = "none") + 
+  xlab("Video Length (s)") + ylab("Count") + ggtitle("Video Length Distribution") +
+  scale_x_continuous(breaks = seq(0,60,5), limits = c(0,60))
+
+
+#### Second song:
+ggplot(sd3, aes(x=create_time, y=log(n_shares), linetype="Trendline")) + 
+  geom_point(aes(colour=n_followers)) + 
+  ggtitle("Song: Miley Cyrus x Arctic Monkeys - 
+Why’d You Only Call Me When You’re High") + xlab("Create Time") + 
+  ylab("Number of Shares (log scale)") + 
+  labs(subtitle = "Number of Shares vs Time of Creation", color = "Follower Count") + 
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) +
+  geom_smooth(method="lm", se=F, aes(group=1), color="#EE1D52") + scale_linetype_discrete(name = "") +
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
