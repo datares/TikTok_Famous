@@ -29,7 +29,7 @@ For the collection of trending videos, we used [David Teather's Unofficial TikTo
 
 From our video data, we are planning on distinguishing popular posts of each user in order to see how those specific posts are able to outpeform the rest of the videos from the users.
 
-In addition to trending video data, we used the `bySound` method of the api to collect data of videos that use some of the most famous songs on TikTok to get an idea of how the choice of music can impact the potential of a video to become a trending video.
+In addition to trending video data, we created a [script](https://github.com/ivantran96/TikTok_famous/blob/main/Datasets/Trending%20Videos%20Data%20Collection/Trending%20Songs/trending_songs.ipynb) that used the `bySound` method of the api to collect data of videos that use some of the most famous songs on TikTok to get an idea of how the choice of music can impact the potential of a video to become a trending video.
 
 ### Top TikTokers
 For the collection of the top TikTokers, we use the simple webscraping module on Python [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). The scripts and html pages used can be seen [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets/Top%20Tiktokers%20Data%20Collection) in this repo. For the webscraping, we found information for the first 6 columns of our dataset from [InflueceGrid](https://www.influencegrid.com/tiktok-influencers). The remaining information was manually entered, citing sources such as [Famous Birthdays](https://www.famousbirthdays.com/) and [TikTok](https://www.tiktok.com/en/).
@@ -78,7 +78,7 @@ We were not able to find a cohesive list of information on the demographics of t
 Insert cleaning process here.
 Trending Video Dataset:
 
-For the datasets involving the popular songs on TikTok, we first obtained the dictionaries from the api's `bySound` method and then collected the useful metrics into a pandas dataframe to make manipulating the data easier. Then we imported the data into R to create  summary statistics and find out which songs had usable data to create visualizations.
+For the datasets involving the popular songs on TikTok, we first obtained the dictionaries from the api's `bySound` method and then collected the useful metrics into a pandas dataframe to make manipulating the data easier. Then we created some summary statistics to find out which songs had usable data to create visualizations that would help us answer the questions we had raised.
 
 ### Top TikTokers
 For the `top-250-tiktokers.csv` dataset, we first removed the unnecessary symbols from our numerical column entries (such as the % or 'm' to indicate a million) and converted those datatypes from object to float. For the remaining columns, the entries were entered in manually so we did not have to clean up any possible duplicate/nonsensical values/entries that appeared in the data.
