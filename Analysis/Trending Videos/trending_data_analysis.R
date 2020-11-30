@@ -74,7 +74,7 @@ ggplot(top_users, aes(x=n_hash, y=n_plays)) +
   geom_point(aes(colour=n_followers)) + 
   ggtitle("Number of Plays vs Number of Hashtags Used") +
   labs(color="Follower Count") + xlab("Number of Hashtags") + ylab("Number of Plays") +
-  geom_hline(yintercept = mean(top_users$n_likes)) + 
+  geom_hline(yintercept = mean(top_users$n_plays)) + 
   geom_vline(xintercept = mean(top_users$n_hash, na.rm = T)) + 
   scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5) 
 
