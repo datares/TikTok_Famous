@@ -4,6 +4,7 @@ library(tidyverse)
 library(viridis)
 library(RColorBrewer)
 
+library(dplyr)
 library(stringr)
 
 options(scipen=999)
@@ -147,3 +148,18 @@ top_songs <- top_songs[5:nrow(top_songs),]
 top_songs <- top_songs[1:(nrow(top_songs)-6),]
 
 top_songs <- top_songs[top_songs$Freq > mean(top_songs$Freq),]
+
+
+top_songs <- top_songs[!is.na(top_songs$genre),]
+
+top_songs_tot_nums <- top_songs %>% group_by(genre) %>% summarise(total = sum(Freq))
+
+
+ggplot(top_songs, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_polar("y") +
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
+
+#ggplot(top_songs_tot_nums, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_polar("y")
+
+
+
+
