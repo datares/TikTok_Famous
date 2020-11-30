@@ -66,7 +66,7 @@ ggplot(top_users, aes(x=video_length, y=n_likes)) +
 # add n_hashtags
 top_users$n_hash <- numeric(nrow(top_users))
 for(i in 1:(nrow(top_users)-1)){
-  top_users$n_hash[i+1] <- sum(strsplit(abv_avg_likes$hashtags[i], "")[[1]] == "'")/2
+  top_users$n_hash[i+1] <- sum(strsplit(top_users$hashtags[i], "")[[1]] == "'")/2
 }
 
 ## Likes vs Number of hashtags
