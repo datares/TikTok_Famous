@@ -158,7 +158,7 @@ top_songs_tot_nums <- top_songs %>% group_by(genre) %>% summarise(total = sum(Fr
 ggplot(top_songs, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_polar("y") +
   scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
 
-#ggplot(top_songs_tot_nums, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_polar("y")
+#ggplot(top_songs_tot_nums, aes(x=factor(1),y=total, fill=genre)) + geom_bar(width=1) + coord_polar("y")
 
 
 
