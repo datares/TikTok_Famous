@@ -66,17 +66,22 @@ ggplot(top_users, aes(x=video_length, y=n_likes)) +
 # add n_hashtags
 top_users$n_hash <- numeric(nrow(top_users))
 for(i in 1:(nrow(top_users)-1)){
-  top_users$n_hash[i+1] <- sum(strsplit(abv_avg_likes$hashtags[i], "")[[1]] == "'")/2
+  top_users$n_hash[i+1] <- sum(strsplit(top_users$hashtags[i], "")[[1]] == "'")/2
 }
 
 ## Likes vs Number of hashtags
-ggplot(top_users, aes(x=n_hash, y=n_likes)) + 
+ggplot(top_users, aes(x=n_hash, y=n_plays)) +
   geom_point(aes(colour=n_followers)) + 
-  scale_color_viridis_c() + ggtitle("Number of Likes vs Number of Hashtags Used") +
-  labs(color="Follower Count") + xlab("Number of Hashtags") + ylab("Number of Likes") +
-  geom_hline(yintercept = mean(top_users$n_likes)) + 
-  geom_vline(xintercept = mean(top_users$n_hash, na.rm = T))
+  ggtitle("Number of Plays vs Number of Hashtags Used") +
+  labs(color="Follower Count") + xlab("Number of Hashtags") + ylab("Number of Plays") +
+  geom_hline(yintercept = mean(top_users$n_plays)) + 
+  geom_vline(xintercept = mean(top_users$n_hash, na.rm = T)) + 
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5) 
 
+ggplot(avg_minus_users, aes(x=n_hash)) + geom_density()
+
+avg_plus_users <- top_users[top_users$n_likes > mean(top_users$n_likes),]
+avg_minus_users <- top_users[top_users$n_likes < mean(top_users$n_likes),]
 
 ### Sample Song data
 par(mfrow=c(2,2))
@@ -91,7 +96,7 @@ ggplot(sd0, aes(x=create_time, y=log(n_followers))) +
   geom_hline(yintercept = log(summary_stats$avg_likes[1])) + 
   geom_smooth(method="lm")
 
-ggplot(sd0, aes(x=create_time, y=log(n_likes))) + geom_point(aes(colour=n_followers)) + 
+ggplot(song_10, aes(x=create_time, y=log(n_likes))) + geom_point(aes(colour=n_followers)) + 
   ggtitle("Song: WAP feat. Megan Thee Stallion") + 
   xlab("Time") + ylab("Number of Likes (log scale)") + 
   labs(subtitle = "Likes vs Time", color = "Follower Count") + 
@@ -119,7 +124,7 @@ ggplot(sd0, aes(x=create_time, y=log(n_shares), linetype="Trendline")) +
 print(2)
 
 
-ggplot(sd0, aes(x=create_time, y=log10(n_plays))) + 
+ggplot(song_3, aes(x=create_time, y=log10(n_plays))) + 
   geom_point(aes(colour=n_followers)) + 
   ggtitle("Song: WAP feat. Megan Thee Stallion") + xlab("Time") + 
   ylab("Number of Plays (log scale)") + 
