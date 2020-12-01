@@ -14,7 +14,7 @@ The purpose of this project is to explore various aspects of TikTok—specifical
 
 1. Clone this repository (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Raw Data is being kept [here](https://github.com/ivantran96/TikTok_famous/tree/main/Datasets) within this repo.  
-3. Data processing/visualization scripts are being kept [here](https://github.com/ivantran96/TikTok_famous/tree/main/Visualizations)
+3. Data processing/visualization scripts are being kept [here](https://github.com/ivantran96/TikTok_famous/tree/main/Analysis)
 
 ## Data Collection :open_file_folder:
 For the data collection, we had a different method of collection for our trending videos dataset and our top tiktokers dataset.
