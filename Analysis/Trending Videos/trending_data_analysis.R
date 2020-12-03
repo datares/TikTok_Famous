@@ -41,13 +41,26 @@ for(i in 1:nrow(abv_avg_likes)){
 options(scipen=999)
 
 ## LIKES vs VIDEO LENGTH based on n_followers
-ggplot(abv_avg_likes, aes(x=video_length, y=n_likes)) + 
+ggplot(all_sug_users, aes(x=video_length, y=n_likes)) + 
   geom_point(aes(colour=n_followers)) + 
   scale_color_viridis_c() + geom_vline(xintercept = mean(abv_avg_likes$video_length)) +
   geom_hline(yintercept = mean(abv_avg_likes$n_likes)) +
   xlab("Video Length (s)") + ylab("Number of likes") + 
   ggtitle("Number of Likes vs Video Length") +
   labs(color = "Follower Count", subtitle = "Videos with Above Average Likes") + xlim(c(0, 60))
+
+## PLAYS VS VIDEO LENGTH based on n_followers
+ggplot(all_sug_users, aes(x=video_length, y=n_plays)) + 
+  geom_point(aes(colour=n_followers)) + 
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)  + 
+  geom_vline(xintercept = mean(abv_avg_likes$video_length)) +
+  geom_hline(yintercept = mean(abv_avg_likes$n_likes)) +
+  xlab("Video Length (s)") + ylab("Number of Plays") + 
+  ggtitle("Number of Plays vs Video Length") +
+  labs(color = "Follower Count") + xlim(c(0, 60))
+
+
+
 
 # people with more followers seem to post shorter vids, so shorter the sweeter?
 
@@ -140,6 +153,13 @@ ggplot(top_users, aes(x=video_length)) +
   theme(legend.position = "none") + 
   xlab("Video Length (s)") + ylab("Count") + ggtitle("Video Length Distribution") +
   scale_x_continuous(breaks = seq(0,60,5), limits = c(0,60))
+
+ggplot(all_sug_users, aes(x=video_length)) + 
+  geom_histogram(fill="#EE1D52", aes(color = "#101010"), binwidth = 1) + 
+  theme(legend.position = "none") + 
+  xlab("Video Length (s)") + ylab("Count") + ggtitle("Video Length Distribution") +
+  scale_x_continuous(breaks = seq(0,60,5), limits = c(0,60))
+
 
 
 #### Second song:
