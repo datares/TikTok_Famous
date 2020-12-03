@@ -50,7 +50,7 @@ ggplot(all_sug_users, aes(x=video_length, y=n_likes)) +
   labs(color = "Follower Count", subtitle = "Videos with Above Average Likes") + xlim(c(0, 60))
 
 ## PLAYS VS VIDEO LENGTH based on n_followers
-ggplot(all_sug_users, aes(x=video_length, y=n_plays)) + 
+ggplot(all_sug_users[all_sug_users$n_plays < 100000000,], aes(x=video_length, y=n_plays)) + 
   geom_point(aes(colour=n_followers)) + 
   scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)  + 
   geom_vline(xintercept = mean(abv_avg_likes$video_length)) +
