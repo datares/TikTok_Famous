@@ -155,8 +155,32 @@ top_songs <- top_songs[!is.na(top_songs$genre),]
 top_songs_tot_nums <- top_songs %>% group_by(genre) %>% summarise(total = sum(Freq))
 
 
+per <- table(top_songs$genre)
+per <- per/sum(per) * 100
+per <- round(per, 1)
+per2 <- data.frame(table(top_songs$genre))
+colnames(per2) <- c("Genre", "Freq")
+
+ggplot(per2, aes(x="", y=Freq, fill=Genre)) +
+  geom_bar(width=1, stat="identity") +
+  coord_polar("y", start=0) +
+  xlab("") +
+  ylab("Value") +
+  theme(axis.text.x=element_blank(),axis.ticks.x=element_blank()) 
+
+#+ 
+ # geom_text(aes(x = c(1, 1.5, 1, 1, 1.2, 1.3, 1.4, 1.5, 1.5, 1.5),
+  #              label = paste(round(Freq/sum(Freq) * 100,1), "%", sep="")))
+
+
 ggplot(top_songs, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_polar("y") +
-  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5)
+  scale_colour_gradient(high = "#EE1D52", low = "#69C9D0",breaks = waiver(), n.breaks = 5) +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
+        axis.text.y = element_blank(), axis.ticks.y = element_blank(), 
+        axis.title.x = element_blank(), axis.title.y = element_blank()) + 
+  labs(color="Genre") + ggtitle("Distribution of the Top TikTok Songs by Genre") #+
+  #geom_text(aes(label = paste(unname(per), "%", sep="")))
+                #position=position_stack(vjust=0.5)))
 
 #ggplot(top_songs_tot_nums, aes(x=factor(1),y=total, fill=genre)) + geom_bar(width=1) + coord_polar("y")
 
