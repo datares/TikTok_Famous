@@ -184,7 +184,7 @@ ggplot(top_songs, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_pola
 
 #ggplot(top_songs_tot_nums, aes(x=factor(1),y=total, fill=genre)) + geom_bar(width=1) + coord_polar("y")
 
-png("genres_of_top_songs.png", width = 1000, height = 666)
+png("genres_of_top_songs.png", width = 1200, height = 800)
 
 pie(per2$Freq, 
     labels = paste(round(100*per2$Freq/sum(per2$Freq),2), "%", sep=""), 
