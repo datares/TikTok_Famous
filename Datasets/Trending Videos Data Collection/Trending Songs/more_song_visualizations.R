@@ -184,6 +184,14 @@ ggplot(top_songs, aes(x=factor(1), fill=genre)) + geom_bar(width=1) + coord_pola
 
 #ggplot(top_songs_tot_nums, aes(x=factor(1),y=total, fill=genre)) + geom_bar(width=1) + coord_polar("y")
 
+png("genres_of_top_songs.png", width = 1000, height = 666)
 
+pie(per2$Freq, 
+    labels = paste(round(100*per2$Freq/sum(per2$Freq),2), "%", sep=""), 
+    col = rainbow(n=10), 
+    main = "Genre Distribution of Top TikTok Songs", cex.main = 2) 
 
+legend("topright", legend=paste(per2$Genre, ": ",
+                                round(100*per2$Freq/sum(per2$Freq),2), "%" ,sep=""), fill = rainbow(n=10))
+dev.off()
 
