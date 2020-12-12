@@ -24,7 +24,9 @@ For the data collection, we had a different method of collection for our trendin
 
 [TikTok API](https://github.com/davidteather/TikTok-Api)
 
-For the collection of trending videos, we used [David Teather's Unofficial TikTok Api](https://www.google.com/search?q=tiktok+api&oq=tiktok+api&aqs=chrome.0.69i59j0i20i263j0l5j69i60.1342j0j7&sourceid=chrome&ie=UTF-8) to collect the data. Currently, we are using the api's `trending` method to collect the data on trending videos. This selection of trending videos by this method is assumed to be what is labeled as tredning by TikTok. In addition, using the list of top TikTokers, we compiled a large amount of users using the `getSuggestedUsersbyIDCrawler` api method, which used the top TikTokers and collected the suggested users. Along with the `byUsername` method, which collects videos from specfic TikTokers given their username, we collected video data of the 25 most recent posts of each user from the top TikTokers list and the suggested list. 
+For the collection of trending videos, we used [David Teather's Unofficial TikTok Api](https://github.com/davidteather/TikTok-Api) to collect the data. 
+
+Currently, we are using the api's `trending` method to collect the data on trending videos. This selection of trending videos by this method is assumed to be what is labeled as tredning by TikTok. In addition, using the list of top TikTokers, we compiled a large amount of users using the `getSuggestedUsersbyIDCrawler` api method, which used the top TikTokers and collected the suggested users. Along with the `byUsername` method, which collects videos from specfic TikTokers given their username, we collected video data of the 25 most recent posts of each user from the top TikTokers list and the suggested list. 
 
 From our video data, we are planning on distinguishing popular posts of each user in order to see how those specific posts are able to outpeform the rest of the videos from the users.
 
