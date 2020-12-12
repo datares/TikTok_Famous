@@ -1,4 +1,4 @@
-# Demystifying TikTok :notes:
+# How to Become TikTok Famous :notes:
 This project is a part of the [Data Blog](https://datares.github.io/#/datablog) at [DataResolutions](https://datares.github.io/#/).  The article published on this project, along with other articles from Data Blog, can be found on [Medium](https://medium.com/@ucladatares).
 
 ## Project Motivation/Description :dizzy:
